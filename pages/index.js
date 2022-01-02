@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import styles from './style.module.scss';
+import SinglePriceGrid from "../components/SinglePriceGrid";
 
 export default function Home() {
   return (
@@ -52,7 +54,8 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
       </Head>
 
-      <main>
+      <main className={styles.container}>
+        <SinglePriceGrid />
       </main>
     </>
   )

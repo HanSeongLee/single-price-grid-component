@@ -1,0 +1,167 @@
+@import "styles/utils";
+
+.singlePriceGrid {
+  width: 311px;
+  height: 722px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+
+  @include media(">desktop") {
+    width: 635px;
+    height: 475px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            "joinCommunity joinCommunity"
+            "subscription whyUs";
+  }
+
+  .joinCommunity {
+    padding: 24px;
+
+    @include media(">desktop") {
+      grid-area: joinCommunity;
+      padding: 40px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.25px;
+      color: #2AB3B1;
+      margin-bottom: 24px;
+
+      @include media(">desktop") {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.3px;
+      }
+    }
+
+    .subtitle {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.1875px;
+      color: #C0DF33;
+      margin-bottom: 16px;
+
+      @include media(">desktop") {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: -0.225px;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: -0.175px;
+      color: #9AA7BE;
+
+      @include media(">desktop") {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+
+  .subscription {
+    display: flex;
+    flex-direction: column;
+    background: #2AB3B1;
+    padding: 24px;
+
+    @include media(">desktop") {
+      grid-area: subscription;
+      padding: 40px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: -0.225px;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .priceBlock {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+
+      .price {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: -0.4px;
+        color: #FFFFFF;
+        margin-right: 11px;
+      }
+
+      .unit {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        color: #FFFFFF;
+        opacity: 0.5;
+      }
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.2px;
+      color: #FFFFFF;
+      margin-bottom: 26px;
+    }
+
+    .signUpButton {
+      background: #C0DF33;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+      border-radius: 5px;
+      border: 0;
+      outline: none;
+      min-height: 48px;
+
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.2px;
+      color: #FFFFFF;
+    }
+  }
+
+  .whyUs {
+    background: #4ABFBC;
+    padding: 24px;
+
+    @include media(">desktop") {
+      grid-area: whyUs;
+      padding: 40px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: -0.225px;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.175px;
+      color: #FFFFFF;
+      opacity: 0.75;
+      white-space: pre-line;
+    }
+  }
+}
