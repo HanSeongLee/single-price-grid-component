@@ -134,6 +134,15 @@
       line-height: 19px;
       letter-spacing: -0.2px;
       color: #FFFFFF;
+      cursor: pointer;
+
+      @include media(">desktop") {
+        transition: background 0.3s;
+
+        &:hover {
+          background: #ccee37;
+        }
+      }
     }
   }
 
